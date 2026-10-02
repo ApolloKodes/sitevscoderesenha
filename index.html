@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Entrar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="side">
+  <div class="brand"><i></i>Portal</div>
+  <div>
+    <h2>Bem-vindo de volta.</h2>
+    <p>Acesse sua conta para continuar de onde parou.</p>
+  </div>
+</section>
+
+<main>
+  <button class="theme" id="theme" type="button">Tema escuro</button>
+
+  <div class="card" id="loginView">
+    <h1>Entrar</h1>
+    <p class="sub">Use seu e-mail e senha para acessar.</p>
+
+    <div class="alert" id="alert" role="alert"></div>
+
+    <form id="form" novalidate>
+      <div class="field" id="f-email">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" autocomplete="email" placeholder="voce@exemplo.com">
+        <p class="err" id="e-email"></p>
+      </div>
+
+      <div class="field" id="f-pass">
+        <label for="pass">Senha</label>
+        <div class="input">
+          <input id="pass" type="password" autocomplete="current-password" placeholder="Sua senha" style="padding-right:76px">
+          <button class="toggle" id="toggle" type="button" aria-label="Mostrar senha">Mostrar</button>
+        </div>
+        <p class="err" id="e-pass"></p>
+      </div>
+
+      <div class="row">
+        <label class="check"><input type="checkbox" id="remember"> Lembrar meu e-mail</label>
+        <a href="#" id="forgot">Esqueci a senha</a>
+      </div>
+
+      <button class="btn" id="submit" type="submit"><span class="spin"></span><span id="btnText">Entrar</span></button>
+    </form>
+
+    <p class="foot">Não tem conta? <a href="#" id="signup">Criar conta</a></p>
+    <div class="hint">Demonstração: use <code>demo@exemplo.com</code> e <code>senha123</code>.</div>
+  </div>
+
+  <div class="card welcome" id="welcome">
+    <div class="tick">✓</div>
+    <h1>Login realizado</h1>
+    <p class="sub" id="welcomeMsg"></p>
+    <button class="btn" id="logout" type="button">Sair</button>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
